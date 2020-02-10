@@ -115,7 +115,7 @@ print(kitten.id) --> "K1"
 Note: The varibles *object.class* and *object.id*  are protected so they cannot be (easily) modified by the user
 ```Lua
 puppy.class = class{}
-puppy.id = 8
+puppy.id = 90
 
 print(puppy.class) --> "class: 0x60000273cb40"
 print(puppy.id) --> "0x60000273cb40"
