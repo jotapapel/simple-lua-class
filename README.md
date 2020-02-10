@@ -22,6 +22,7 @@ puppy:speak() --> "bark!"
 
 ## Documentation
 ### Creating a new class
+>``local Class = class{var = value[, var2 = value2]}``
 ```Lua
 local Horse = class{}
 local Dog = class{sound = "bark!"}
@@ -30,6 +31,7 @@ print(Horse) --> "class: 0x600002739000"
 print(Dog) --> "class: 0x60000273cb40"
 ```
 ### Extending an existing class
+>``local Class2 = Class:extend{var = value[, var2 = value2]}``
 ```Lua
 local Dog = class{sound = "bark!"}
 local Labrador = Dog:extend{toy = "ball"}
@@ -49,6 +51,7 @@ print(puppy.class.super) --> "class: 0x60000273cb40"
 ```
 ### Adding variables to the class
 #### Static variables
+>``Class:implement({var = value[, var2 = value2]}, true)``
 Static variables are added to the class and are not passed directly to objects created from that class, they are instead accessed by calling the objects *class* variable first.
 ```Lua
 local Dog = class{sound = "bark!"}
@@ -59,6 +62,7 @@ print(puppy.breed) --> "nil"
 print(puppy.class.breed) --> "Labrador"
 ```
 #### Non-static variables
+>``Class:implement({var = value[, var2 = value2]}[, false])``
 Non-static variables are added directly to the objects.
 ```Lua
 local Dog = class{sound = "bark!"}
@@ -72,6 +76,7 @@ print(puppy1.color) --> "brown"
 print(puppy2.color) --> "golden"
 ```
 ### Creating a new object
+>``local obj = Class:new([var, var2])``
 ```Lua
 -- default
 local Dog = class{sound = "bark!"}
@@ -104,7 +109,7 @@ print(puppy.id) --> "0x60000273cb40"
 -- custom id
 local catCount = 0
 local Cat = class{sound = "meow!"}
-function Cat:id(object)
+function Cat:id()
 	catCount = catCount + 1
 	return 'K'..tostring(catCount)
 end
