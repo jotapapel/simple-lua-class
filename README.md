@@ -52,6 +52,8 @@ print(puppy.class.super) --> "class: 0x60000273cb40"
 ### Adding variables to the class
 #### Static variables
 >``Class:implement({var = value[, var2 = value2]}, true)``
+
+
 Static variables are added to the class and are not passed directly to objects created from that class, they are instead accessed by calling the objects *class* variable first.
 ```Lua
 local Dog = class{sound = "bark!"}
@@ -63,6 +65,8 @@ print(puppy.class.breed) --> "Labrador"
 ```
 #### Non-static variables
 >``Class:implement({var = value[, var2 = value2]}[, false])``
+
+
 Non-static variables are added directly to the objects.
 ```Lua
 local Dog = class{sound = "bark!"}
