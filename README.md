@@ -35,6 +35,9 @@ print(Dog) --> "class: 0x60000273cb40"
 print(puppy.class.super) --> "class: 0x60000273cb40"
 print(puppy.sound) --> "bark!"
 print(puppy.toy) --> "ball"
+
+puppy.class.super = "something"
+print(puppy.class.super) --> "class: 0x60000273cb40"
 ```
 Note: The varible *class.super*  is protected so it cannot be (easily) modified by the user
 ### Adding variables to the class
