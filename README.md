@@ -95,7 +95,7 @@ print(kitten.name) --> "Leo"
 
 When an object is created the system also asigns it with a unique id which can be created by the user.
 ```Lua
--- generic id
+-- default
 local Dog = class{sound = "bark!"}
 local puppy = Dog:new()
 
