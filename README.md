@@ -108,8 +108,10 @@ function Cat:id(object)
 end
 
 local kitten = Cat:new()
-
 print(kitten.id) --> "K1"
+
+local kitten = Cat:new()
+print(kitten.id) --> "K2"
 ```
 
 Note: The varibles *object.class* and *object.id*  are protected so they cannot be (easily) modified by the user
