@@ -35,9 +35,10 @@ print(Dog) --> "class: 0x60000273cb40"
 print(puppy.class.super) --> "class: 0x60000273cb40"
 print(puppy.sound) --> "bark!"
 print(puppy.toy) --> "ball"
-´´´
+```
+
 Note: The varible *class.super*  is protected so it cannot be (easily) modified by the user
-´´´Lua
+```Lua
 puppy.class.super = "something"
 print(puppy.class.super) --> "class: 0x60000273cb40"
 ```
@@ -105,6 +106,7 @@ local kitten = Cat:new()
 
 print(kitten.id) --> "K1"
 ```
+
 Note: The varibles *object.class* and *object.id*  are protected so they cannot be (easily) modified by the user
 ```Lua
 puppy.class = class{}
