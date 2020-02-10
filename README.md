@@ -7,12 +7,17 @@ local Dog = class{sound = "bark!"}
 function Dog:constructor(name)
 	self.name = name
 end
+Dog:implement({
+	speak = function(self)
+		print(self.sound)
+	end
+})
 
 local puppy = Dog:new("Max")
 
 print(puppy) --> "object: 0x60000273cb40"
 print(puppy.name) --> "Max"
-print(puppy.sound) --> "bark!"
+puppy:speak() --> "bark!"
 ```
 
 ## Documentation
