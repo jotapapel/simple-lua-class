@@ -3,8 +3,6 @@ A tiny and simple LUA class system developed for the TIC80 platform.
 
 ## Example
 ```Lua
-function class(a) ... end
-
 local Dog = class{sound = "bark!"}
 function Dog:constructor(name)
 	self.name = name
