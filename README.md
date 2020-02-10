@@ -73,12 +73,14 @@ print(puppy2.color) --> "golden"
 ```
 ### Creating a new object
 ```Lua
+-- default
 local Dog = class{sound = "bark!"}
 local puppy = Dog:new()
 
 print(puppy) --> "object: 0x60000273cb40"
 print(puppy.sound) --> "bark!"
 
+-- custom constructor
 local Cat = class{sound = "meow!"}
 function Cat:constructor(name)
 	self.name = name
