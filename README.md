@@ -44,7 +44,7 @@ print(puppy.class.super) --> "class: 0x60000273cb40"
 ```
 ### Adding variables to the class
 #### Static variables
-Static variables are added to the class and are not passed directly onto the objects created from that class, they are instead accessed by calling the objects class first.
+Static variables are added to the class and are not passed directly to objects created from that class, they are instead accessed by calling the objects *class* variable first.
 ```Lua
 local Dog = class{sound = "bark!"}
 Dog:implement({breed = "Labrador"}, true)
@@ -86,7 +86,7 @@ print(kitten.sound) --> "meow!"
 print(kitten.name) --> "Leo"
 ```
 
-When an object is created the system can also asign it with a unique id.
+When an object is created the system also asigns it with a unique id which can be created by the user.
 ```Lua
 -- generic id
 local Dog = class{sound = "bark!"}
