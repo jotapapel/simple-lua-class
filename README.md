@@ -36,6 +36,7 @@ print(puppy.class.super) --> "class: 0x60000273cb40"
 print(puppy.sound) --> "bark!"
 print(puppy.toy) --> "ball"
 ```
+Note: The varible *class.super*  is protected so it cannot be (easily) modified by the user
 ### Adding variables to the class
 #### Static variables
 Static variables are added to the class and are not passed directly onto the objects created from that class, they are instead accessed by calling the objects class first.
@@ -99,7 +100,7 @@ local kitten = Cat:new()
 
 print(kitten.id) --> "K1"
 ```
-Note: The varible *object.id*  is protected so it cannot be (easily) modified by the user
+Note: The varibles *object.id* and *object.class*  are protected so they cannot be (easily) modified by the user
 ```Lua
 local Dog = class{sound = "bark!"}
 local puppy = Dog:new()
