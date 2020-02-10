@@ -16,7 +16,6 @@ print(puppy.sound) --> "bark!"
 ```
 
 ## Documentation
-### Class
 ### Creating a new class
 ```Lua
 local Horse = class{}
@@ -24,6 +23,18 @@ local Dog = class{sound = "bark!"}
 
 print(Horse) --> "class: 0x600002739000"
 print(Dog) --> "class: 0x60000273cb40"
+```
+### Extending an existing class
+```Lua
+local Dog = class{sound = "bark!"}
+local Labrador = Dog:extend{toy = "ball"}
+
+local puppy = Labrador:new()
+
+print(Dog) --> "class: 0x60000273cb40"
+print(puppy.class.super) --> "class: 0x60000273cb40"
+print(puppy.sound) --> "bark!"
+print(puppy.toy) --> "ball"
 ```
 ### Adding variables to the class
 #### Static variables
@@ -49,8 +60,7 @@ puppy2.color = "golden"
 print(puppy1.color) --> "brown"
 print(puppy2.color) --> "golden"
 ```
-### Objects
-#### Creating a new object
+### Creating a new object
 ```Lua
 local Dog = class{sound = "bark!"}
 local puppy = Dog:new()
